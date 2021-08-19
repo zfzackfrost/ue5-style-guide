@@ -274,12 +274,13 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 | Animation Composite     | AC_        |            |                                  |
 | Animation Montage       | AM_        |            |                                  |
 | Animation Sequence      | A_         |            |                                  |
-| Blend Space             | BS_        |            |                                  |
-| Blend Space 1D          | BS_        |            |                                  |
+| Blend Space             | BS2_       |            |                                  |
+| Blend Space 1D          | BS1_       |            |                                  |
 | Level Sequence          | LS_        |            |                                  |
 | Morph Target            | MT_        |            |                                  |
 | Paper Flipbook          | PFB_       |            |                                  |
 | Rig                     | Rig_       |            |                                  |
+| Control Rig             | CRig_      |            |                                  |
 | Skeletal Mesh           | SK_        |            |                                  |
 | Skeleton                | SKEL_      |            |                                  |
 
@@ -289,12 +290,12 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
-| AI Controller           | AIC_       |            |                                  |
+| AI Controller           | BP_        | _AIC       |                                  |
 | Behavior Tree           | BT_        |            |                                  |
 | Blackboard              | BB_        |            |                                  |
-| Decorator               | BTDecorator_ |          |                                  |
-| Service                 | BTService_ |            |                                  |
-| Task                    | BTTask_    |            |                                  |
+| Decorator               | BTD_       |            |                                  |
+| Service                 | BTS_       |            |                                  |
+| Task                    | BTT_       |            |                                  |
 | Environment Query       | EQS_       |            |                                  |
 | EnvQueryContext         | EQS_       | Context    |                                  |
 
@@ -333,25 +334,26 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 <a name="1.2.6"></a>
 ### 1.2.6 Textures
 
-| Asset Type              | Prefix     | Suffix     | Notes                            |
-| ----------------------- | ---------- | ---------- | -------------------------------- |
-| Texture                 | T_         |            |                                  |
-| Texture (Diffuse/Albedo/Base Color)| T_ | _D      |                                  |
-| Texture (Normal)        | T_         | _N         |                                  |
-| Texture (Roughness)     | T_         | _R         |                                  |
-| Texture (Alpha/Opacity) | T_         | _A         |                                  |
-| Texture (Ambient Occlusion) | T_     | _O         |                                  |
-| Texture (Bump)          | T_         | _B         |                                  |
-| Texture (Emissive)      | T_         | _E         |                                  |
-| Texture (Mask)          | T_         | _M         |                                  |
-| Texture (Specular)      | T_         | _S         |                                  |
-| Texture (Metallic)      | T_         | _M         |                                  |
-| Texture (Packed)        | T_         | _*         | See notes below about [packing](#anc-textures-packing). |
-| Texture Cube            | TC_        |            |                                  |
-| Media Texture           | MT_        |            |                                  |
-| Render Target           | RT_        |            |                                  |
-| Cube Render Target      | RTC_       |            |                                  |
-| Texture Light Profile   | TLP        |            |                                  |
+| Asset Type                          | Prefix     | Suffix     | Notes                                                   |
+| ----------------------------------- | ---------- | ---------- | ------------------------------------------------------- |
+| Texture                             | T_         |            |                                                         |
+| Texture with virtual streaming      | VT_        |            |                                                         |
+| Texture (Diffuse/Albedo/Base Color) | T_/VT_     | _D         |                                                         |
+| Texture (Normal)                    | T_/VT_     | _N         |                                                         |
+| Texture (Roughness)                 | T_/VT_     | _R         |                                                         |
+| Texture (Alpha/Opacity)             | T_/VT_     | _A         |                                                         |
+| Texture (Ambient Occlusion)         | T_/VT_     | _O         |                                                         |
+| Texture (Bump)                      | T_/VT_     | _B         |                                                         |
+| Texture (Emissive)                  | T_/VT_     | _E         |                                                         |
+| Texture (Mask)                      | T_/VT_     | _K         |                                                         |
+| Texture (Specular)                  | T_/VT_     | _S         |                                                         |
+| Texture (Metallic)                  | T_/VT_     | _M         |                                                         |
+| Texture (Packed)                    | T_/VT_     | _*         | See notes below about [packing](#anc-textures-packing). |
+| Texture Cube                        | TC_        |            |                                                         |
+| Media Texture                       | MT_        |            |                                                         |
+| Render Target                       | RT_        |            |                                                         |
+| Cube Render Target                  | RTC_       |            |                                                         |
+| Texture Light Profile               | TLP        |            |                                                         |
 
 <a name="anc-textures-packing"></a>
 <a name="1.2.6.1"></a>
@@ -444,10 +446,12 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 <a name="1.2.12"></a>
 ### 1.2.12 Effects
 
-| Asset Type              | Prefix     | Suffix     | Notes                            |
-| ----------------------- | ---------- | ---------- | -------------------------------- |
-| Particle System         | PS_        |            |                                  |
-| Material (Post Process) | PP_        |            |                                  |
+| Asset Type                       | Prefix     | Suffix     | Notes                            |
+| -------------------------------- | ---------- | ---------- | -------------------------------- |
+| Particle System (Cascade)        | PS_        |            |                                  |
+| Niagara System                   | NS_        |            |                                  |
+| Niagara Emitter                  | NE_        |            |                                  |
+| Material (Post Process)          | PP_        |            |                                  |
 
 **[⬆ Back to Top](#table-of-contents)**
 
